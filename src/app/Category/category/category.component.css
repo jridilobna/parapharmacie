@@ -1,0 +1,19 @@
+body{
+    margin-top: 230px;
+    margin-left: 180px;
+    width: 800px;
+   
+}
+th{
+    font-size: 30px;
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+td {
+    font-size: 18px;
+    color: rgb(43, 125, 226);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button{
+    margin-left: 15px;
+}

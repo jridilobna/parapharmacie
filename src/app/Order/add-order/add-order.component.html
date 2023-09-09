@@ -1,0 +1,39 @@
+<body>
+    <div class="container">  
+        <form id="contact" action="" method="post">
+          <h3>Add Order</h3>
+          <h4>*</h4>
+          <fieldset>
+            <input class="form-control" placeholder=" Order Id" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <h4>*</h4>
+          <fieldset>
+            <input  class="form-control" placeholder="Order Date" type="datetime-local" tabindex="2" required>
+          </fieldset>
+          <h4>*</h4>
+          <fieldset>
+            <input class="form-control" placeholder="Delivery Address" type="text" tabindex="3" required>
+          </fieldset>
+          <h4>*</h4>
+          <fieldset>
+            <input class="form-control"  placeholder="Total Amount" type="number" tabindex="4" required>
+          </fieldset>
+          <h4>*</h4>
+          <fieldset>
+            <select class="form-select" aria-label="Default select example">
+                <option selected style="color: gray;">Status</option>
+                <option value="1">Pending</option>
+                <option value="2">Processing</option>
+                <option value="3">Shipped</option>
+                <option value="3">Delivered</option>
+                <option value="3">Cancelled</option>
+              </select>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Add Order</button>
+          </fieldset>
+        </form>
+       
+        
+      </div>
+    </body>
