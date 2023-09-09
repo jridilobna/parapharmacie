@@ -1,12 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Category } from '../Models/Category';
 import { Product } from '../Models/Product';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:4200' // Replace with your server's URL
+  })
+};
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CategoryService {
   private BaseUrl ='http://localhost:8080/categories' ;
   constructor( private http : HttpClient) { }
@@ -25,7 +34,7 @@ export class CategoryService {
   }
   // Get All Categories : 
   getAllCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.BaseUrl}/getAllCategories`);
+    return this.http.get<Category[]>(`${this.BaseUrl}/getAllCategories`,httpOptions);
   }
    //Get products by category : 
    getProductsByategory(id :number ) :Observable<Product[]>{

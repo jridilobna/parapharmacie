@@ -23,6 +23,8 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getAllCategories().subscribe(
       (result) =>{
         this.categories=result;
+        console.log(result);
+        
       } ,
       (error) =>{
         console.error('Une erreur s\'est produite lors du chargement des catégories : ', error);
@@ -34,6 +36,8 @@ export class CategoryComponent implements OnInit {
     this.categoryService.postCategory(newCat).subscribe(
       (result) =>{
         this.categories.push(result);
+        console.log(this.categories);
+        
       } ,
       (error) => {
         console.error('Une erreur s\'est produite lors de la création de la catégorie : ', error);
@@ -60,6 +64,8 @@ export class CategoryComponent implements OnInit {
         () => {
        
           this.categories = this.categories.filter((c) => c.id !== id);
+          console.log(this.categories);
+          
 
         },
         (error) => {
